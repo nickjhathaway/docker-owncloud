@@ -35,21 +35,28 @@ The following parameters are only used to setup the initial configuration. Once 
 See the [owncloud documentation](https://doc.owncloud.org/server/8.1/admin_manual/configuration_server/config_sample_php_parameters.html) for what each parameter does. The goal here is not to support every parameter, just those parameters
 that you really would like to have in place before you get the the UI.
 
-
-|Environment Variable|autoconfig.php   |Default                                |
-|--------------------|-----------------|---------------------------------------|
-|DB_TYPE             |dbtype           |sqlite                                 |
-|DB_NAME             |dbname           |owncloud                               |
-|DB_TABLE_PREFIX     |dbtableprefix    |                                       |
-|DB_USER             |dbuser           |                                       |
-|DB_PASS             |dbpass           |                                       | 
-|DB_HOST             |dbhost           |                                       | 
-|ADMIN_LOGIN         |adminlogin       |admin                                  |
-|ADMIN_PASS          |adminpass        |(randomly generated, printed to stdout)|
-|LANGUAGE            |default_language |                                       |
-|PROXY               |proxy            |                                       |
-|PROXY_USER_PASSWORD |proxyuserpwd     |                                       |
-
+* __DB_TYPE__ --> dbtype
+    * default: sqlite
+* __DB_NAME__ --> dbname
+    * default: owncloud
+* __DB_TABLE_PREFIX__ --> dbtableprefix
+    * default:
+* __DB_USER__ --> dbuser
+    * default:
+* __DB_PASS__ --> dbpass
+    * default:
+* __DB_HOST__ --> dbhost
+    * default:
+* __ADMIN_LOGIN__ --> adminlogin
+    * default: admin
+* __ADMIN_PASS__ --> adminpass
+    * default: (randomly generated, printed to stdout)
+* __LANGUAGE__ --> default_language
+    * default:
+* __PROXY__ --> proxy
+    * default:
+* __PROXY_USER_PASSWORD__ --> proxyuserpwd
+    * default:
 
 ## Examples
 
