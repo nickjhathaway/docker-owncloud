@@ -93,8 +93,9 @@ The example below creates a owncloud container using an external db
 
 ```
 docker run --name owncloud -h owncloud -p 443:443\
-  -v /somepath/owncloud_mnt:/owncloud-data -e DB_TYPE="mysql" -e DB_HOST="db.example.com:3306"\
-  -e DB_USER="SOMEUSER" -e DB_PASS="SOMEPASS" -e SSL_ENABLED=true xetusoss/owncloud
+  -v /somepath/owncloud_mnt:/owncloud-data -e DB_TYPE="mysql"\
+  -e DB_HOST="db.example.com:3306"-e DB_USER="SOMEUSER"\
+  -e DB_PASS="SOMEPASS" -e SSL_ENABLED=true xetusoss/owncloud
 ```
 
 ## The owncloud-data volume
@@ -103,6 +104,11 @@ The externalized data directory contains 4 directories: `data`, `config`, `apps`
 
  The `data`, `config`, and `apps` directory are all standard in an owncloud installation, so reference the owncloud documentation for those. `dotfiles` is a custom directory because owncloud stores certain configuration settings in the `.htaccess` and `.user.ini` files that should persist between container replacements.
 
+## Caveats / Gotchas
+
+#### The volume directory must be executable by `other`
+
+In order for the apache processes in the container to properly read the files in the dotfiles directory (.htaccess, etc), the executable bit must be set on the volume folder in the host.
 
 ## Why another owncloud container?
 
