@@ -39,7 +39,7 @@ RUN apt-get update && \
 #
 # Go get the owncloud version we'll installing
 #
-RUN OWNCLOUD_VERSION="8.1.3" && \
+RUN OWNCLOUD_VERSION="8.1.4" && \
   cd /tmp && \
   curl -O https://download.owncloud.org/community/owncloud-${OWNCLOUD_VERSION}.tar.bz2 && \
   cd /opt && tar xjf /tmp/owncloud-${OWNCLOUD_VERSION}.tar.bz2
